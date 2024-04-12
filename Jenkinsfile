@@ -26,8 +26,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sshagent (credentials: (['SrijanEC2Cred']))
+                sshagent (credentials: (['SrijanEC2Cred'])){
                 sh("ssh -o StrictHostKeyChecking=no ubuntu@13.51.72.214 'rm -rf NextJS && git clone https://github.com/srijan-vaddadi/NextJS.git && cd NextJS && npm ci && sudo npm run dev -- -p 80 -H 0.0.0.0'")
+                }
             }
         }
     }
