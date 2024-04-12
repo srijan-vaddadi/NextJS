@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './__tests__/page.tests.tsx'
+                sh 'npm run test'
             }
         }
         stage('Deliver') { 
