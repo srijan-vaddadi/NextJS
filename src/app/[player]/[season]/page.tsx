@@ -1,5 +1,4 @@
 import Apicall from "@/app/apicall";
-import { table } from "console";
 
 interface PlayerPageProps {
   params: {
